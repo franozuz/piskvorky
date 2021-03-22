@@ -1,33 +1,33 @@
+/* Nastavenie gradientu pre cele pozadie stranky*/
 body {
   background-image: linear-gradient(#615dad, #ffc8da);
-  background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
 }
 
+/*Nastylovanie celej karty welcome*/
 .welcome {
   font-family: sans-serif;
   font-size: 1em;
   line-height: 1.5;
   text-align: center;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   background-color: #283e50;
   color: white;
   width: 380px;
 }
 
+/*Nastylovanie uvodneho obrazku*/
 img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 5rem;
   width: 380px;
   height: auto;
   border-radius: 10px 10px 0px 0px;
 }
 
+/*Nastylovanie textov*/
 h1 {
   font-family: Lobster;
   font-size: 3em;
@@ -38,18 +38,16 @@ h1 {
 }
 .welcome__text {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
+  margin: 0 auto;
   width: 340px;
   height: auto;
   padding: 0 20px 20px 20px;
 }
 
-.pravidla-btn {
+/*Nastylovanie vseobecnej triedy btn*/
+.btn {
   width: 380px;
   height: 50px;
-  background-color: #1fcca4;
   color: #f9f9f9;
   font-size: 1rem;
   display: block;
@@ -58,17 +56,16 @@ h1 {
   margin-bottom: 1px;
 }
 
-.start-btn {
-  width: 380px;
-  height: 50px;
-  background-color: #0197f6;
-  color: #f9f9f9;
-  font-size: 1rem;
-  display: block;
-  text-decoration: none;
-  line-height: 3rem;
+/*Pridanie specifickych farieb pre jednotlive buttons*/
+.pravidla-btn {
+  background-color: #1fcca4;
 }
 
+.start-btn {
+  background-color: #0197f6;
+}
+
+/*Vyspecifikovanie stylu pri hover stave*/
 .pravidla-btn:hover {
   background-color: #1cbb96;
 }
