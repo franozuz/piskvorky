@@ -66,3 +66,11 @@ h1 {
   text-decoration: none;
   line-height: 3rem;
 }
+
+.pravidla-btn:hover {
+  background-color: #1cbb96;
+}
+
+.start-btn:hover {
+  background-color: #0090e9;
+}
