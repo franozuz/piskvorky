@@ -104,8 +104,6 @@ h1 {
 
 .container {
   box-sizing: border-box;
-  /* display: flex;
-  flex-direction: column; */
   display: block;
   background-color: #283e50;
   margin: 0 auto;
@@ -185,7 +183,11 @@ figure {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: calc(100% / 2.5);
+    justify-content: space-around;
+  }
+
+  figure {
+    width: calc(100% / 2.2);
   }
 
   .btn.home-btn,
