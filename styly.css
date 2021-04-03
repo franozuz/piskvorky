@@ -1,7 +1,4 @@
 /* Nastavenie gradientu pre cele pozadie stranky*/
-html {
-  min-height: 100%;
-}
 
 body {
   background-image: linear-gradient(#615dad, #ffc8da);
@@ -87,7 +84,7 @@ h1 {
   text-align: center;
 }
 
-/* PISKVORKY PART.2*/
+/* ------------------------------PISKVORKY PART.2------------------------------*/
 
 /*modry container*/
 
@@ -121,16 +118,20 @@ li {
 .icons {
   height: 1em;
   filter: invert(100%);
-  display: inline-block;
-  padding: 0;
-  margin: 0;
 }
 
 /*vzorove situacie*/
 
+.ukazky {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 0 1 auto;
+  width: 100%;
+}
+
 .instructions-img {
   width: 100%;
-  border-radius: 0;
   padding: 0;
 }
 
@@ -154,4 +155,19 @@ figure {
 
 .home-btn:hover {
   background-color: #1cbb96;
+}
+
+/*RESPONSIVE DESIGN*/
+
+@media (min-width: 650px) {
+  .container {
+    width: 640px;
+  }
+  .container .ukazky {
+    width: calc(100% / 2);
+  }
+
+  .btn {
+    width: 640px;
+  }
 }
