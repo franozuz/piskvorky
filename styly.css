@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
 /* Nastavenie gradientu pre cele pozadie stranky*/
 
 body {
@@ -39,7 +49,7 @@ h1 {
 .welcome__text {
   display: block;
   margin: 0 auto;
-  width: 320px;
+  width: 350px;
   height: auto;
   padding: 0 15px 20px 15px;
   background-color: #283e50;
@@ -86,12 +96,17 @@ h1 {
 
 /* ------------------------------PISKVORKY PART.2------------------------------*/
 
+.body-pravidla {
+  height: 100%;
+}
+
 /*modry container*/
 
 .container {
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
+  display: block;
   background-color: #283e50;
   margin: 0 auto;
   width: 350px;
@@ -126,8 +141,6 @@ li {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  flex: 0 1 auto;
-  width: 100%;
 }
 
 .instructions-img {
@@ -153,6 +166,10 @@ figure {
   border-bottom: solid 1px #283e50;
 }
 
+.secondstart-btn {
+  background-color: #0197f6;
+}
+
 .home-btn:hover {
   background-color: #1cbb96;
 }
@@ -163,11 +180,16 @@ figure {
   .container {
     width: 640px;
   }
-  .container .ukazky {
-    width: calc(100% / 2);
+
+  .ukazky {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: calc(100% / 2.5);
   }
 
-  .btn {
+  .btn.home-btn,
+  .btn.secondstart-btn {
     width: 640px;
   }
 }
