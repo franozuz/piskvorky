@@ -281,6 +281,8 @@ figure {
   cursor: pointer;
 }
 
+/* ----------------------- 4. UKOL ADDING CROSSES A CIRCLES ----------------------------- */
+
 .game__area--circle {
   background-image: url(images/circle.svg);
   background-size: 65%;
