@@ -280,3 +280,17 @@ figure {
   background-color: rgba(255, 255, 255, 0.7);
   cursor: pointer;
 }
+
+.game__area--circle {
+  background-image: url(images/circle.svg);
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.game__area--cross {
+  background-image: url(images/cross.svg);
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
