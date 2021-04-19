@@ -288,6 +288,8 @@ figure {
   background-size: 65%;
   background-repeat: no-repeat;
   background-position: center;
+  animation-name: gradual-growth;
+  animation-duration: 0.15s;
 }
 
 .game__area--cross {
@@ -295,4 +297,15 @@ figure {
   background-size: 65%;
   background-repeat: no-repeat;
   background-position: center;
+  animation-name: gradual-growth;
+  animation-duration: 0.15s;
+}
+
+@keyframes gradual-growth {
+  0% {
+    background-size: 0%;
+  }
+  100% {
+    background-size: 65%;
+  }
 }
