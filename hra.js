@@ -1,14 +1,20 @@
 'use strict';
 
-const jeNaTahu = 'circle';
-
 const gameButton = document.querySelector('.game__area');
+const activePlayerElm = document.querySelector('.player--active');
+
+let jeNaTahu = 'circle';
 
 gameButton.addEventListener('click', (event) => {
   const pressedButton = event.target;
+
   if (jeNaTahu === 'circle') {
     pressedButton.classList.add('game__area--circle');
-  } else pressedButton.classList.add('game__area--cross');
+    activePlayerElm.src = 'images/cross.svg';
+    jeNaTahu = 'cross';
+  } else {
+    pressedButton.classList.add('game__area--cross');
+    activePlayerElm.src = 'images/circle.svg';
+    jeNaTahu = 'circle';
+  }
 });
-
-const activePlayerElm = document.querySelector('.player--active');
