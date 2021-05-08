@@ -94,6 +94,68 @@ const isWinningMove = (field) => {
     return true;
   }
 
+  // Koukni doprava sikmo nahoru
+  let inDiagonalUpRight = 1;
+  let r = origin.row;
+  let c = origin.column;
+
+  while (
+    r > 0 &&
+    c < boardSize - 1 &&
+    symbol === getSymbol(getField(r - 1, c + 1))
+  ) {
+    inDiagonalUpRight++;
+    r--;
+    c++;
+  }
+
+  // Koukni doleva sikmo dolu
+  r = origin.row;
+  c = origin.column;
+
+  while (
+    r < boardSize - 1 &&
+    c > 0 &&
+    symbol === getSymbol(getField(r + 1, c - 1))
+  ) {
+    inDiagonalUpRight++;
+    r++;
+    c--;
+  }
+
+  if (inDiagonalUpRight >= symbolsToWin) {
+    return true;
+  }
+
+  // Koukni doleva sikmo nahoru
+  let inDiagonalUpLeft = 1;
+  r = origin.row;
+  c = origin.column;
+
+  while (r > 0 && c > 0 && symbol === getSymbol(getField(r - 1, c - 1))) {
+    inDiagonalUpLeft++;
+    r--;
+    c--;
+  }
+
+  // Koukni doprava sikmo dolu
+  r = origin.row;
+  c = origin.column;
+
+  while (
+    r < boardSize - 1 &&
+    c < boardSize - 1 &&
+    symbol === getSymbol(getField(r + 1, c + 1))
+  ) {
+    inDiagonalUpLeft++;
+    r++;
+    c++;
+  }
+
+  if (inDiagonalUpLeft >= symbolsToWin) {
+    return true;
+  }
+
   return false;
 };
 
